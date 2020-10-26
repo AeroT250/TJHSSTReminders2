@@ -46,9 +46,48 @@ def verify_fb_token(token_sent):
 
 #chooses a random message to send to the user
 def get_message():
-    sample_responses = ["You are stunning!", "We're proud of you.", "Keep on being you!", "We're greatful to know you :)"]
-    # return selected item to the user
-    return random.choice(sample_responses)
+    
+dayofweek = datetime.datetime.today().weekday()
+   if(dayofweek == 1):
+       return "Hi! Thanks for checking in. Today is Tuesday, a blue day. This means that you have periods" \
+              "1, 2, 3, and 4, with a break between periods 2 and 3. You don't have to fill out any special" \
+              "form today. Here are the times when each class starts: 1st pd is from 8:40 AM - 10:05 AM. 2nd period" \
+              "is from 10:25 - 11:50. You have a lunch break from 12:00 PM - 12:40 PM. Pd 3 is from 12:50 PM" \
+              "- 2:15 PM. Finally, your last class of the day, pd 4, is from 2:35 PM - 4:00 PM. Have a great day!"
+   if(dayofweek == 2):
+       return "Hi! Thanks for checking in. Today is Wednesday, a red day. This means that you have periods" \
+              "5, 6, 7, and 8 (Clubs!), with a break between periods 6 and 7. You don't need to fill out any " \
+              "forms today. Here are the times for each class: 1st pd is from 8:40 AM - 10:05 AM. 2nd period" \
+              "is from 10:25 - 11:50. You have a lunch break from 12:00 PM - 12:40 PM. Pd 3 is from 12:50 PM" \
+              "- 2:15 PM. Then, the first 8th period block is from 2:30 PM - 3:10 PM. To end the day, we have " \
+              "8th period B block, from 3:20 PM - 4:00 PM. Have an amazing day! "
+   if(dayofweek == 3):
+       return "Hi! Thanks for checking in. Today is Thursday, a blue day. This means that you have periods" \
+              "1, 2, 3, and 4, with a break between periods 2 and 3. You don't have to fill out any special" \
+              "form today. Here are the times when each class starts: 1st pd is from 8:40 AM - 10:05 AM. 2nd period" \
+              "is from 10:25 - 11:50. You have a lunch break from 12:00 PM - 12:40 PM. Pd 3 is from 12:50 PM" \
+              "- 2:15 PM. Finally, your last class of the day, pd 4, is from 2:35 PM - 4:00 PM. Have a great day!"
+   if(dayofweek == 4):
+       return "Hi! Thanks for checking in. Today is Wednesday, a red day. This means that you have periods" \
+              "5, 6, 7, and 8 (Clubs!), with a break between periods 6 and 7. You don't need to fill out any " \
+              "forms today. Here are the times for each class: 1st pd is from 8:40 AM - 10:05 AM. 2nd period" \
+              "is from 10:25 - 11:50. You have a lunch break from 12:00 PM - 12:40 PM. Pd 3 is from 12:50 PM" \
+              "- 2:15 PM. Then, the first 8th period block is from 2:30 PM - 3:10 PM. To end the day, we have " \
+              "8th period B block, from 3:20 PM - 4:00 PM. Have an amazing day! "
+   if(dayofweek == 5):
+       return "It's the weekend (Saturday)! Time to relax, read a book, play with a pet, or let's be honest, spend 8 hours a " \
+              "day doing homework. Make sure to schedule your time to include plenty of breaks, and if you have time," \
+              "be sure to take a day off just to relax. See you next week!"
+   if (dayofweek == 6):
+       return "It's the weekend (Sunday)! Time to relax, read a book, play with a pet, or let's be honest, spend 8 hours a " \
+              "day doing homework. Make sure to schedule your time to include plenty of breaks, and if you have time," \
+              "be sure to take a day off just to relax. See you next week!"
+   if(dayofweek == 0):
+       return "Oh boy: it's monday. At least we have a 3 day weekend! Today is pretty much like Saturday or Sunday, but" \
+              "be sure to fill out the Monday Attendance Form so you don't get marked as absent. " \
+              "Here's the link: https://tinyurl.com/monday-check-in-2020"
+
+
 
 #uses PyMessenger to send response to user
 def send_message(recipient_id, response):
