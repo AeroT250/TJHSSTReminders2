@@ -47,7 +47,7 @@ def verify_fb_token(token_sent):
 #chooses a random message to send to the user
 def get_message():
     
-dayofweek = datetime.datetime.today().weekday()
+    dayofweek = datetime.datetime.today().weekday()
    if(dayofweek == 1):
        return "Hi! Thanks for checking in. Today is Tuesday, a blue day. This means that you have periods" \
               "1, 2, 3, and 4, with a break between periods 2 and 3. You don't have to fill out any special" \
